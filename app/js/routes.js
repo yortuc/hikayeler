@@ -26,5 +26,15 @@ angular.module('myApp.routes', ['ngRoute'])
          controller: 'LoginCtrl'
       });
 
+      $routeProvider.when('/kitaplar', {
+         templateUrl: 'partials/kitaplar.html',
+         controller: 'KitaplarCtrl'
+      });
+
+      $routeProvider.when('/yaz', {
+         templateUrl: 'partials/yaz.html',
+         controller: 'YazCtrl'
+      });
+
       $routeProvider.otherwise({redirectTo: '/home'});
    }]);

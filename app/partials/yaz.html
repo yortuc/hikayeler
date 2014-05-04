@@ -1,0 +1,25 @@
+<div class="col-md-12">
+
+	<h1>Hikayeni yaz</h1>
+
+	<h4>bir önceki</h4>
+	<div data-bind="if: birOnceki">
+		<div data-bind="text: birOnceki"></div>
+	</div>
+	
+	<div class="row">
+		<textarea class="col-md-12" data-bind="value: hikaye, valueUpdate: 'keyup'"></textarea>
+	</div>
+	
+	<div class="class">
+		kalan: <span data-bind="text: limit - hikaye().length"></span>
+	</div>
+	
+	<button data-bind="click: kaydet">sar</button>
+
+	<button data-bind="click: yapistir">yapistir</button>
+</div>
+
+<div id="carsaf" class="col-md-12"></div>
+
+<button>Paylaş</button>

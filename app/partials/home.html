@@ -1,10 +1,26 @@
-<h2>Home</h2>
+<div class="col-md-12">
 
-<p class="status good" ng-show-auth="login">Hello! You are logged in.</p>
-<p class="status" ng-show-auth="logout">Not logged in</p>
-<p class="status error" ng-show-auth="error">{{auth.error}}</p>
+	<h1>Hikayeni yaz</h1>
 
-<input ng-model="syncedValue" type="text" /> <b>{{syncedValue}}</b>
+	<div ng-show="birOnceki">
+		<h4>bir önceki</h4>
+		<div>{{ birOnceki }}</div>
+	</div>
 
-<p>Open <a href="{{FBURL}}/syncedValue">Forge</a> or a <a target="_blank" href="index.html">new window</a> to see this input update in real time:</p>
+	<div ng-hide="birOnceki">
+		<h4>hikayeye siz başlıyorsunuz.</h4>
+	</div>
+	
+	<div class="row">
+		<textarea class="col-md-12" ng-model="hikaye"></textarea>
+	</div>
+	
+	<div class="class">
+		<span>kalan: {{limit - hikaye().length}}</span>
+	</div>
+	
+	<button ng-click="kaydet">sar</button>
+	<button ng-click="yapistir">yapistir</button>
+</div>
 
+<div id="carsaf"></div>

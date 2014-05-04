@@ -7,6 +7,14 @@ angular.module('myApp.controllers', [])
       syncData('syncedValue').$bind($scope, 'syncedValue');
    }])
 
+   .controller('KitaplarCtrl', ['$scope', 'syncData', function($scope, syncData){
+      $scope.kitaplar = syncData('kitaplar').$bind($scope, 'kitaplar');
+   }])
+
+   .controller('YazCtrl', ['$scope', 'syncData', function($scope, syncData){
+      
+   }])
+
   .controller('ChatCtrl', ['$scope', 'syncData', function($scope, syncData) {
       $scope.newMessage = null;
 
